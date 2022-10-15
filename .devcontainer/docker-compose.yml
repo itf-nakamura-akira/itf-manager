@@ -1,0 +1,31 @@
+version: '3'
+services:
+    itf-manager:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: itf-manager
+        command: sleep infinity
+        restart: always
+        ports:
+            - '23480:4200' # Angular
+            - '23485:5000' # C#
+        volumes:
+            - ../:/workspace
+        env_file: ./environment.env
+        # depends_on:
+        #     - itf-manager-db
+    # itf-manager-db:
+    #     image: mariadb:10.6.5
+    #     container_name: itf-manager-db
+    #     restart: always
+    #     env_file: ./environment.env
+    #     volumes:
+    #         - itf-manager-db-volume:/var/lib/mariadb/
+    #         - ../database/conf.d:/etc/mysql/conf.d
+    #         - ../database/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    #     ports:
+    #         - '15877:3306' # MariaDB
+# volumes:
+#     itf-manager-db-volume:
+#         driver: local
