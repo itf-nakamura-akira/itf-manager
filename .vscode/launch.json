@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Deno",
+            "name": "API Gateway@Deno",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -10,8 +10,8 @@
             "runtimeArgs": [
                 "run",
                 "--inspect-brk",
-                "-A",
-                "${file}"
+                "--allow-net",
+                "api-gateway/src/server.ts"
             ],
             "attachSimplePort": 9229
         }

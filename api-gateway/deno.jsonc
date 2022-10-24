@@ -1,0 +1,57 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "lib": [
+        ],
+        "strict": true
+    },
+    "importMap": "import_map.json",
+    "lint": {
+        "files": {
+            "include": [
+                "src/"
+            ],
+            "exclude": []
+        },
+        "rules": {
+            // lintルールの指定。
+            // "recommended"でデフォルトのルールになる。
+            "tags": [
+                "recommended"
+            ],
+            // 追加ルール。
+            "include": [],
+            // 除外ルール。
+            "exclude": []
+        }
+    },
+    "fmt": {
+        "files": {
+            "include": [
+                "src/"
+            ],
+            "exclude": []
+        },
+        "options": {
+            "useTabs": true,
+            "lineWidth": 120,
+            "indentWidth": 4,
+            "singleQuote": true,
+            "proseWrap": "preserve"
+        }
+    },
+    "test": {
+        "files": {
+            "include": [
+                "src/"
+            ],
+            "exclude": []
+        }
+    },
+    "tasks": {
+        "serve": "deno run --allow-net src/server.ts",
+        "lint": "deno lint",
+        "fmt": "deno fmt",
+        "test": "deno test"
+    }
+}

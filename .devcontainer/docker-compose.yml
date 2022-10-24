@@ -8,8 +8,8 @@ services:
         command: sleep infinity
         restart: always
         ports:
-            - '23480:4200' # Angular
-            - '23485:5000' # C#
+            - '31600:4200' # SPA(Static Files)@Angular
+            - '31610:8000' # API Gateway@Deno
         volumes:
             - ../:/workspace
         env_file: ./environment.env
