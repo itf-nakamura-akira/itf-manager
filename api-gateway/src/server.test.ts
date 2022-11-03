@@ -35,9 +35,3 @@ Deno.test(
 		assertEquals(x, 3);
 	},
 );
-
-// Similar to longer form, with a named test function as a second argument.
-Deno.test({ permissions: { read: true } }, function helloWorld6() {
-	const x = 1 + 2;
-	assertEquals(x, 3);
-});

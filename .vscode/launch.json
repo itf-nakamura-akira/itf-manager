@@ -5,15 +5,14 @@
             "name": "API Gateway@Deno",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/api-gateway",
             "runtimeExecutable": "deno",
             "runtimeArgs": [
-                "run",
-                "--inspect-brk",
-                "--allow-net",
-                "api-gateway/src/server.ts"
+                "task",
+                "debug"
             ],
-            "attachSimplePort": 9229
+            "attachSimplePort": 9229,
+            "autoAttachChildProcesses": true
         }
     ]
 }
